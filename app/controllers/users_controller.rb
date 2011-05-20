@@ -9,9 +9,8 @@ class UsersController < ApplicationController
     @user = User.new
     @title = "Sign up"
     
-  end
-
-  
+    end
+    
   def create
     @user = User.new(params[:user])
     if @user.save
@@ -22,5 +21,7 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+  
+
   
 end
